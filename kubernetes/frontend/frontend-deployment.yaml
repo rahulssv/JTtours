@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  namespace: jttours
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend-container
+          image: rahul1181/frontend-image:1.15
+          envFrom:
+            - configMapRef:
+                name: frontend-configmap
+          ports:
+            - containerPort: 3000

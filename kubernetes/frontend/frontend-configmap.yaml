@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-configmap
+  namespace: jttours
+data:
+  REACT_APP_API_URL: "backend-service-jttours.ibm01-roks-2add6c5939e72723a23a68c764c76a06-0000.us-south.containers.appdomain.cloud"
