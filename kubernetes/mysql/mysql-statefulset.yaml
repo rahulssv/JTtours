@@ -21,7 +21,7 @@ spec:
         - name: MYSQL_DATABASE
           valueFrom:
             configMapKeyRef:
-              name: mysql-config-map
+              name: mysql-configmap
               key: mysql-database-name
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
@@ -31,7 +31,7 @@ spec:
         - name: MYSQL_USER
           valueFrom:
             configMapKeyRef:
-              name: mysql-config-map
+              name: mysql-configmap
               key: mysql-user-username
         - name: MYSQL_PASSWORD
           valueFrom:
