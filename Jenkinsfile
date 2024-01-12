@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     environment {
-        OPENSHIFT_CRED_ID = ''
+        OPENSHIFT_CRED_ID = 'sha256~Z7N4ajTDXLKFKiMoAq9UBvyA2w2phrNh-t80OiF1XD8'
 OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
         OPENSHIFT_PROJECT = 'jttours'
     }
@@ -37,24 +37,7 @@ docker.withRegistry('https://hub.docker.com/', 'rahul1181') {
                 script {
                     openshift.withCluster(credentialsId: OPENSHIFT_CRED_ID, server: OPENSHIFT_SERVER) {
                         openshift.withProject(OPENSHIFT_PROJECT) {
-                            sh 'oc create ns $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/mysql/mysql-pv.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/mysql/mysql-secret.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/mysql/mysql-configmap.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/mysql/mysql-statefulset.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/mysql/mysql-service.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/mysql/mysql-route.yaml -n $OPENSHIFT_PROJECT'
-        
-                            sh 'oc apply -f kubernetes/backend/backend-configmap.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/backend/backend-deployment.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/backend/backend-service.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/backend/backend-route.yaml -n $OPENSHIFT_PROJECT'
-
-                            // Deploy frontend and backend Deployments, Services, and Routes
-                            sh 'oc apply -f kubernetes/frontend/frontend-configmap.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/frontend/frontend-deployment.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/frontend/frontend-service.yaml -n $OPENSHIFT_PROJECT'
-                            sh 'oc apply -f kubernetes/frontend/frontend-route.yaml -n $OPENSHIFT_PROJECT'
+                            sh './sh'
                         }
                     }
                 }
