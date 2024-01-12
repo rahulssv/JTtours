@@ -28,4 +28,6 @@ oc apply -f kubernetes/frontend/frontend-deployment.yaml -n jttours
 oc apply -f kubernetes/frontend/frontend-service.yaml -n jttours
 oc expose svc frontend-service -n jttours
 
-echo $(oc get route frontend-service -n jttours -o jsonpath='{.spec.host}')
+oc get all -n jttours
+
+echo http://$(oc get route frontend-service -n jttours -o jsonpath='{.spec.host}')
