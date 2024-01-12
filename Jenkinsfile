@@ -37,6 +37,7 @@ docker.withRegistry('https://hub.docker.com/', 'rahul1181') {
                 script {
                     openshift.withCluster(credentialsId: OPENSHIFT_CRED_ID, server: OPENSHIFT_SERVER) {
                         openshift.withProject(OPENSHIFT_PROJECT) {
+                            sh 'oc create ns $OPENSHIFT_PROJECT'
                             sh 'oc apply -f kubernetes/mysql/mysql-pv.yaml -n $OPENSHIFT_PROJECT'
                             sh 'oc apply -f kubernetes/mysql/mysql-secret.yaml -n $OPENSHIFT_PROJECT'
                             sh 'oc apply -f kubernetes/mysql/mysql-configmap.yaml -n $OPENSHIFT_PROJECT'

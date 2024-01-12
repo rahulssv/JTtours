@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: mysql-config-map
+  name: mysql-configmap
   namespace: jttours
 data:
   mysql-server: mysql-service    # The name of mysql service

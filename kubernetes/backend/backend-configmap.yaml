@@ -4,6 +4,7 @@ metadata:
   name: backend-configmap
   namespace: jttours
 data:
-  SPRING_DATASOURCE_URL: jdbc:mysql://$(oc get svc mysql-service -n jttours -o jsonpath='{.spec.clusterIP}')/jttoursdb
+  # MYSQL_SERVICE_IP=$(oc get svc mysql-service -n jttours -o jsonpath='{.spec.clusterIP}')
+  SPRING_DATASOURCE_URL: "jdbc:mysql://$MYSQL_SERVICE_IP/jttoursdb"
   SPRING_DATASOURCE_USERNAME: "root"
   SPRING_DATASOURCE_PASSWORD: "admin"
