@@ -1,0 +1,7 @@
+{
+  "/tours/:id/batches": "/batch/:id",
+  "/batches/booking": "/booking",
+  "/batches/tours/:id": "/batch",
+  "/tours/:tourID/batch/:id": "/batch/:id",
+  "/batches/:id": "/batch/:id"
+}

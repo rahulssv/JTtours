@@ -1,0 +1,149 @@
+.rootX{
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+
+}
+
+.navbar,.div{
+  background-color: #003D59;
+  
+   
+  
+}
+.navbar-nav{
+  justify-content: right;
+  align-items: center;
+  gap: 1rem;
+}
+a.nav-link{
+  color: #FFFFFF;
+
+}
+
+.search-button {
+  --bs-btn-border-radius: 1.5rem;
+  --bs-btn-padding-x: 2.5rem;
+}
+
+/* .button{
+  background-color: #FFFFFF;
+  color: #000100;
+}
+.button :hover{
+  background-color:  #000100;
+  color: #FFFFFF;
+} */
+.navbar-toggler{
+  background: #FFFFFF;
+}
+/* .button-search{
+  background-color: #003D59;
+  color: #FFFFFF;
+  font: 1.3em sans-serif;;
+
+}
+.button-search:hover{
+  color: #003D59;
+  background-color: #FFFFFF;
+} */
+
+.main-header{
+  color: #000100;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+.popularTours{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding: 18px 0 18px 0;
+}
+.card-body{
+  background-color: #003D59;
+  color: #FFFFFF;
+}
+.card-img-top{
+  height: 100px;
+  width: auto;
+}
+
+/* .header-search-btn{
+  transition: all 1s ease-in-out !important;
+}
+.header-search-btn:hover{
+  background-color: #00283b;
+  color: white;
+  width: 100px;
+} */
+.nav-link{
+  font-size: 20px;
+  color: white;
+}
+ 
+.nav-link:hover{
+  color: white;
+}
+
+.navbar-nav li{
+  position: relative;
+}
+.navbar-nav li::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  background: white;
+  transition: 0.5s;
+  margin: auto;
+}
+.navbar-nav li:hover::after{
+  width: 100%;
+}
+
+/* for tour card */
+.tour-card{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minMax(250px,1fr));
+  grid-gap: 30px;
+   
+}
+
+.card{
+  /* border-radius: 20px !important; */
+  cursor: pointer;
+  overflow: hidden;
+}
+.card img{
+  transition: all 0.5s ease;
+}
+.card img:hover{
+  transform: scale(1.1);
+}
+ 
+/* Styles for Footer */
+
+#footer {
+  background-color: #00283b;
+  color: #FFFFFF;
+}
+
+.profile-menu {
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 118px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+ 

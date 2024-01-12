@@ -1,0 +1,48 @@
+{"obj":[
+  {
+
+    "image": "https://mittalbuilders.com/wp-content/uploads/2020/12/Reasons-to-settle-down-in-Pune.png",
+
+    "name": "Pune-Mumbai",
+
+    "desc": "Lorem ipsum is placeholder text used in publishing and graphic design. It's also known as lipsum.Lorem ipsum is used to demonstrate the visual form of a document or typeface without relying on meaningful content. It's used before final copy is available."
+
+  },
+
+  {
+
+    "image": "https://lp-cms-production.imgix.net/2021-11/GettyRF_157579910.jpg",
+
+    "name": "Goa-Pune",
+
+    "desc": "Lorem ipsum is placeholder text used in publishing and graphic design. It's also known as lipsum.Lorem ipsum is used to demonstrate the visual form of a document or typeface without relying on meaningful content. It's used before final copy is available."
+
+  },
+   
+  {
+
+    "image": "https://cdn.britannica.com/37/189837-050-F0AF383E/New-Delhi-India-War-Memorial-arch-Sir.jpg",
+
+    "name": "Delhi- Manali",
+
+    "desc": "Lorem ipsum is placeholder text used in publishing and graphic design. It's also known as lipsum.Lorem ipsum is used to demonstrate the visual form of a document or typeface without relying on meaningful content. It's used before final copy is available. "
+
+  }],
+  "team":[
+    {
+      "image":"https://teams.microsoft.com/l/message/19:22d248b1-a246-489d-9ad1-18b777a95a4b_508feb2c-e565-45df-8993-b8643775e502@unq.gbl.spaces/1700683389005?context=%7B%22contextType%22%3A%22chat%22%7D",
+      "name":"Sandeep Kumar",
+      "desc":"Software Engineer"
+    },
+    {
+      "image":"https://teams.microsoft.com/l/message/19:22d248b1-a246-489d-9ad1-18b777a95a4b_508feb2c-e565-45df-8993-b8643775e502@unq.gbl.spaces/1700683368697?context=%7B%22contextType%22%3A%22chat%22%7D",
+      "name":"Taranjeet Kalsi",
+      "desc":"Software Engineer"
+    }
+  ]
+
+}
+
+
+ 
+

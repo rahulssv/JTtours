@@ -1,0 +1,94 @@
+#signup-heading{
+    margin-top: 10px;
+}
+
+.signup-inp,
+.signup-inp:focus {
+  background: transparent;
+
+  padding: 7px;
+  outline: none;
+}
+
+
+/* floatable label */
+.signup-lbl {
+  margin: 10px 0;
+  position: relative;
+  display: inline-block;
+}
+
+.signup-label-span {
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.2s;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.5;
+}
+
+.signup-inp {
+  padding: 7px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+ margin: 2% 0;
+  width: min(100%, 300px);
+}
+
+.signup-inp:focus + .signup-label-span,
+.signup-inp:not(:placeholder-shown) + .signup-label-span {
+  opacity: 1;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}
+
+#signup-id {
+  width: min(400px, 100%);
+  padding: 30px;
+}
+
+label {
+  min-width: 100%;
+}
+.signup-card {
+  width: min(400px, 100%);
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.signup-label-span {
+  padding: 15px 35px;
+}
+
+#signup-sub-btn {
+  background: rgb(0, 61, 89);
+  color: white;
+  margin: 7px 0px;
+  width: 45%;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+}
+
+.signup-error-message {
+  font-size: 0.9rem;
+  display: block;
+  text-align: left;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: rgb(238, 76, 76);
+}
+
+.signuo-btn-div {
+  margin: 12px 0px;
+}
+.signup-bg div{
+  background-color: white;
+}

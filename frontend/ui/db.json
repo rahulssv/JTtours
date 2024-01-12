@@ -1,0 +1,223 @@
+{
+  "tours": [
+    {
+      "name": "Manali-Chandigarh",
+      "mode": "WALK",
+      "itinerary": {
+        "dayPlans": [
+          {
+            "dayCount": 1,
+            "place": "Delhi",
+            "distance": "250",
+            "activity": "Reporting at Hotel and evening get together",
+            "accomodation": {
+              "hotelName": "Hotel Radisson Blues",
+              "address": "Street 124 New Delhi",
+              "roomType": "TWIN_BED"
+            }
+          },
+          {
+            "dayCount": 2,
+            "place": "Chandigarh",
+            "distance": "230",
+            "activity": "Exploration",
+            "accomodation": {
+              "hotelName": "Hotel Blue Leaf",
+              "address": "Street 126 Chandigarh",
+              "roomType": "TWIN_BED"
+            }
+          }
+        ]
+      },
+      "difficultyLevel": "MODERATE",
+      "startAt": "Manali",
+      "endAt": "Chandigarh",
+      "id": "1699532890847",
+      "days": 2
+    },
+    {
+      "name": "Delhi-Manali",
+      "mode": "MOTORBIKE",
+      "itinerary": {
+        "dayPlans": [
+          {
+            "dayCount": 1,
+            "place": "Delhi",
+            "distance": "250",
+            "activity": "Reporting at Hotel and evening get together",
+            "accomodation": {
+              "hotelName": "Hotel Radisson Blues",
+              "address": "Street 124 New Delhi",
+              "roomType": "SINGLE"
+            }
+          }
+        ]
+      },
+      "difficultyLevel": "EASY",
+      "startAt": "Delhi",
+      "endAt": "Manali",
+      "id": "1700302393960"
+    }
+  ],
+  "users": [
+    {
+      "username": "sandeep@gmail.com",
+      "password": "Abcdef@12345",
+      "confirmPassword": "Abcdef@12345",
+      "isAdmin": true,
+      "id": "1700453103829"
+    },
+    {
+      "username": "shruti@gmail.com",
+      "password": "Abcdef@12345",
+      "confirmPassword": "Abcdef@12345",
+      "id": "1700453782407"
+    }
+  ],
+  "batch": [
+    {
+      "tourID": "1699532890847",
+      "startDate": "2023-11-21",
+      "capacity": "32",
+      "perParticipantCost": "99996",
+      "guide": {
+        "name": {
+          "first": "John",
+          "last": "Clark"
+        },
+        "mobile": {
+          "number": "8877665544"
+        }
+      },
+      "id": 1,
+      "status": "ACTIVE"
+    }
+  ],
+  "booking": [
+    {
+      "date": "2023-10-17",
+      "amount": 200000,
+      "username": "shruti@gmail.com",
+      "batchId": 1,
+      "travellers": [
+        {
+          "name": {
+            "first": "Anand",
+            "last": "Awasthi"
+          },
+          "mobile": {
+            "number": "9988776655"
+          },
+          "id": "1700200710794"
+        },
+        {
+          "name": {
+            "first": "Shruti",
+            "last": "Choudhary"
+          },
+          "mobile": {
+            "number": "08877665544"
+          },
+          "id": "1700200713450"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "date": "2023-10-17",
+      "amount": 100000,
+      "username": "shruti@gmail.com",
+      "batchId": 1,
+      "travellers": [
+        {
+          "name": {
+            "first": "Anand",
+            "last": "Awasthi"
+          },
+          "mobile": {
+            "number": "9988776655"
+          },
+          "id": "1700202124274"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "date": "2023-10-17",
+      "amount": 300000,
+      "username": "shruti@gmail.com",
+      "batchId": 1,
+      "travellers": [
+        {
+          "name": {
+            "first": "Anand",
+            "last": "Awasthi"
+          },
+          "mobile": {
+            "number": "08877665544"
+          },
+          "id": "1700218187304"
+        },
+        {
+          "name": {
+            "first": "John",
+            "last": "Wick"
+          },
+          "mobile": {
+            "number": "08877665544"
+          },
+          "id": "1700218191047"
+        },
+        {
+          "name": {
+            "first": "Shruti",
+            "last": "Choudhary"
+          },
+          "mobile": {
+            "number": "08877665544"
+          },
+          "id": "1700218196491"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "date": "2023-10-17",
+      "amount": 100000,
+      "username": "shruti@gmail.com",
+      "batchId": 1,
+      "travellers": [
+        {
+          "name": {
+            "first": "",
+            "last": ""
+          },
+          "mobile": {
+            "number": ""
+          },
+          "id": "1700218851942"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "date": "2023-10-19",
+      "amount": 99996,
+      "username": "shruti@gmail.com",
+      "batchId": 1,
+      "travellers": [
+        {
+          "name": {
+            "first": "Anand",
+            "last": "Awasthi"
+          },
+          "mobile": {
+            "number": "8877665544"
+          },
+          "id": "1700392683198"
+        }
+      ],
+      "id": 5
+    }
+  ]
+}

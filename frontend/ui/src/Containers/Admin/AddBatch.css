@@ -1,0 +1,18 @@
+.form-group{
+    padding: 10px;
+}
+@media screen and (min-width:768px) and (max-width:1000px){
+    .batch{
+        width: 60%;
+        height: auto;
+    }
+
+}
+@media screen and (min-width:1001px){
+    .batch{
+        width: 50%;
+
+    }
+
+}
+
