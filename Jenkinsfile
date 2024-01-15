@@ -45,3 +45,4 @@ docker.withRegistry('https://hub.docker.com/', 'rahul1181') {
         }
     }
 }
+}
