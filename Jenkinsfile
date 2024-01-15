@@ -23,11 +23,11 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
         stage('Build and Push Docker Images') {
             steps {
                 script {
-docker.build("rahul1181/frontend-image:1.15", "./frontend")
-docker.build("rahul1181/backend-image:1.2", "./backend")
+docker.build("rahul1181/frontend-image:1.16", "./frontend")
+docker.build("rahul1181/backend-image:1.3", "./backend")
 docker.withRegistry('https://hub.docker.com/', 'rahul1181') {
-                        docker.image("rahul1181/frontend-image:1.15").push()
-                        docker.image("rahul1181/backend-image:1.2").push()
+                        docker.image("rahul1181/frontend-image:1.16").push()
+                        docker.image("rahul1181/backend-image:1.3").push()
                     }
             }
         }
