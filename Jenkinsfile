@@ -31,6 +31,7 @@ docker.withRegistry('https://hub.docker.com/', 'rahul1181') {
                     }
             }
         }
+        }
  
         stage('Deploy to OpenShift') {
             steps {
@@ -44,5 +45,4 @@ docker.withRegistry('https://hub.docker.com/', 'rahul1181') {
             }
         }
     }
-}
 }
