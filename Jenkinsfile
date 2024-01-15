@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     environment {
-        OPENSHIFT_CRED_ID = 'sha256~Z7N4ajTDXLKFKiMoAq9UBvyA2w2phrNh-t80OiF1XD8'
+        OPENSHIFT_CRED_ID = '1c5a682d-38da-41e0-9ad1-468811c16bc4'
 OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
         OPENSHIFT_PROJECT = 'jttours'
     }
