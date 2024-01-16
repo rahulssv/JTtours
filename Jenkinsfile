@@ -27,10 +27,10 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
                 script {
                     def buildAndPush = { dir, imageName ->
                         dir {
-                            sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}"
+                            sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
                             sh "docker build -t ${DOCKER_USERNAME}/${imageName} ."
                             sh "docker push ${DOCKER_USERNAME}/${imageName}"
-                            sh "docker logout ${DOCKER_REGISTRY}"
+                            sh "docker logout ${DOCKER_USERNAME}"
                         }
                     }
  
