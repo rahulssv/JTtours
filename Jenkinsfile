@@ -59,7 +59,9 @@ pipeline {
     post {
         always {
             // Cleanup or additional steps after the pipeline
-        }
+            script{
+                echo "Always block executed!"
+            }
     }
  
     
