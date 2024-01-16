@@ -4,7 +4,7 @@ pipeline {
     environment {
         OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
         OPENSHIFT_PROJECT = 'jttours'
-        OPENSHIFT_CREDENTIALS = 'OPEN_SHIFT_ID'
+        OPENSHIFT_TOKEN_CREDENTIALS_ID = 'OPEN_SHIFT_ID'
         DOCKER_HUB_CREDENTIALS = 'DOCKER_ID'
         FRONTEND_IMAGE_NAME = 'rahul1181/frontend-image:1.16'
         BACKEND_IMAGE_NAME = 'rahul1181/backend-image:1.3'
@@ -14,7 +14,7 @@ pipeline {
         stage('Authenticate to OpenShift') {
             steps {
                 script {
-                    withCredentials([openshiftToken(credentialsId: OPENSHIFT_CREDENTIALS, variable: 'OPENSHIFT_TOKEN')]) {
+                    withCredentials([string(credentialsId: OPENSHIFT_TOKEN_CREDENTIALS_ID, variable: 'OPENSHIFT_TOKEN')]) {
                         sh "oc login --token=${OPENSHIFT_TOKEN} ${OPENSHIFT_SERVER}"
                     }
                 }
