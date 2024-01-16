@@ -20,6 +20,38 @@ pipeline {
                 }
             }
         }
+        stage('Build and Push Images') {
+            parallel {
+                stage('Frontend') {
+                    steps {
+                        script {
+                            // Build frontend Docker image
+                            sh "docker build -t ${FRONTEND_IMAGE_NAME} ./frontend"
+                            // Push frontend image to Docker Hub
+                            dockerLoginAndPush(FRONTEND_IMAGE_NAME)
+                        }
+                    }
+                }
+                stage('Backend') {
+                    steps {
+                        script {
+                            // Build backend Docker image
+                            sh "docker build -t ${BACKEND_IMAGE_NAME} ./backend"
+                            // Push backend image to Docker Hub
+                            dockerLoginAndPush(BACKEND_IMAGE_NAME)
+                        }
+                    }
+                }
+            }
+        }
+        stage('Deploy to OpenShift') {
+            steps {
+                script {
+                    // Use OpenShift CLI or Jenkins Kubernetes plugin to deploy
+                    sh "./sh"
+                }
+            }
+        }
  
         
     }
