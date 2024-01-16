@@ -9,6 +9,9 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
         DOCKER_CREDENTIALS_ID = '905152c7-643b-4416-94eb-9cbb2e5f40d9'
     }
  
+    stages {
+        
+ 
         stage('Build and Push Docker Images - Frontend') {
             steps {
                 script {
@@ -54,3 +57,4 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
             }
         }
     }
+}
