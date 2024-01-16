@@ -23,34 +23,6 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
             }
         }
  
-        stage('Build and Push Docker Images') {
-            steps {
-                script {
-                    def buildAndPush = { dir, imageName ->
-                        dir {
-                            sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD} ${DOCKER_REGISTRY}"
-                            sh "docker build -t ${DOCKER_USERNAME}/${imageName} ."
-                            sh "docker push ${DOCKER_USERNAME}/${imageName}"
-                            sh "docker logout ${DOCKER_REGISTRY}"
-                        }
-                    }
- 
-                    buildAndPush('./frontend', 'frontend-image:1.15')
-                    buildAndPush('./backend', 'backend-image:1.2')
-                }
-            }
-        }
- 
-        stage('Deploy to OpenShift') {
-            steps {
-                script {
-                    openshift.withCluster(server: OPENSHIFT_SERVER, token: OPENSHIFT_TOKEN) {
-                        openshift.withProject(OPENSHIFT_PROJECT) {
-                            sh "./sh"
-                        }
-                    }
-                }
-            }
-        }
+        
     }
 }
