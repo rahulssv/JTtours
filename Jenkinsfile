@@ -30,8 +30,8 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
                     dir('./frontend') {
                         withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                             sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
-                            sh "docker build -t ${DOCKER_REGISTRY}/frontend-image:1.16 ."
-                            sh "docker push ${DOCKER_REGISTRY}/frontend-image:1.16"
+                            sh "docker build -t ${DOCKER_REGISTRY}/frontend-image:1.15 ."
+                            sh "docker push ${DOCKER_REGISTRY}/frontend-image:1.15"
                             sh "docker logout ${DOCKER_REGISTRY}"
                         }
                     }
@@ -45,8 +45,8 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
                     dir('./backend') {
                         withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                             sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
-                            sh "docker build -t ${DOCKER_REGISTRY}/backend-image:1.3 ."
-                            sh "docker push ${DOCKER_REGISTRY}/backend-image:1.3"
+                            sh "docker build -t ${DOCKER_REGISTRY}/backend-image:1.2 ."
+                            sh "docker push ${DOCKER_REGISTRY}/backend-image:1.2"
                             sh "docker logout ${DOCKER_REGISTRY}"
                         }
                     }
