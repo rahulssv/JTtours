@@ -9,21 +9,7 @@ OPENSHIFT_SERVER = 'https://c100-e.us-south.containers.cloud.ibm.com:30954'
         DOCKER_CREDENTIALS_ID = '905152c7-643b-4416-94eb-9cbb2e5f40d9'
     }
  
-    stages {
-        stage('Authenticate OpenShift') {
-            steps {
-                script {
-                    withCredentials([string(credentialsId: OPENSHIFT_CREDENTIALS_ID, variable: 'OPENSHIFT_TOKEN')]) {
-                        openshift.withCluster(server: OPENSHIFT_SERVER, token: OPENSHIFT_TOKEN) {
-                            openshift.withProject(OPENSHIFT_PROJECT) {
-                                echo "Successfully authenticated with OpenShift"
-                            }
-                        }
-                    }
-                }
-            }
-        }
- 
+    
         stage('Build and Push Docker Images - Frontend') {
             steps {
                 script {
