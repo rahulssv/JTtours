@@ -21,4 +21,4 @@ RUN npm install
 RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
 
 CMD npm run build && npx serve -s build
-#CMD ["npm", "start"
+#CMD ["npm", "start"]
