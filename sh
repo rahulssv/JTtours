@@ -1,4 +1,4 @@
-oc delete ns jttours
+#!/bin/bash
 oc create ns jttours
 
 # For MySQL Database

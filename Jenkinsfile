@@ -25,9 +25,9 @@ pipeline {
                 stage('Frontend') {
                     steps {
                         script {
-                            // Build frontend Docker image
+                            
                             sh "docker build -t ${FRONTEND_IMAGE_NAME} ./frontend"
-                            // Push frontend image to Docker Hub
+                           
                             dockerLoginAndPush(FRONTEND_IMAGE_NAME)
                         }
                     }
@@ -35,9 +35,9 @@ pipeline {
                 stage('Backend') {
                     steps {
                         script {
-                            // Build backend Docker image
+                            
                             sh "docker build -t ${BACKEND_IMAGE_NAME} ./backend"
-                            // Push backend image to Docker Hub
+                            
                             dockerLoginAndPush(BACKEND_IMAGE_NAME)
                         }
                     }
@@ -47,7 +47,7 @@ pipeline {
         stage('Deploy to OpenShift') {
             steps {
                 script {
-                    // Use OpenShift CLI or Jenkins Kubernetes plugin to deploy
+                    
                     sh "./sh"
                 }
             }
@@ -58,7 +58,7 @@ pipeline {
  
     post {
         always {
-            // Cleanup or additional steps after the pipeline
+            
             script{
                 echo "Always block executed!"
             }
@@ -69,7 +69,7 @@ pipeline {
 }
 
 def dockerLoginAndPush(imageName) {
-        // Docker login to Docker Hub
+        
         withCredentials([usernamePassword(credentialsId: DOCKER_HUB_CREDENTIALS, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
             sh "docker login -u ${DOCKER_USERNAME} -p ${DOCKER_PASSWORD}"
             sh "docker push ${imageName}"
