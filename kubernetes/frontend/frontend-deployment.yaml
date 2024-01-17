@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: rahul1181/frontend-image:1.16
+          image: rahul1181/frontend-image:latest
           envFrom:
             - configMapRef:
                 name: frontend-configmap

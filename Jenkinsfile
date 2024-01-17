@@ -6,8 +6,8 @@ pipeline {
         OPENSHIFT_PROJECT = 'jttours'
         OPENSHIFT_TOKEN_CREDENTIALS_ID = 'OPENSHIFT_ID'
         DOCKER_HUB_CREDENTIALS = 'DOCKER_ID'
-        FRONTEND_IMAGE_NAME = 'rahul1181/frontend-image:1.16'
-        BACKEND_IMAGE_NAME = 'rahul1181/backend-image:1.3'
+        FRONTEND_IMAGE_NAME = 'rahul1181/frontend-image:latest'
+        BACKEND_IMAGE_NAME = 'rahul1181/backend-image:latest'
     }
  
     stages {

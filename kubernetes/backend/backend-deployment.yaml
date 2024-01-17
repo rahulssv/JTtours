@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: rahul1181/backend-image:1.3
+          image: rahul1181/backend-image:latest
           envFrom:
             - configMapRef:
                 name: backend-configmap
