@@ -1,3 +1,4 @@
+oc delete ns jttours
 oc create ns jttours
 
 # For MySQL Database

@@ -23,4 +23,8 @@ EXPOSE 3000
 RUN npm install
 RUN mkdir -p node_modules/.cache && chmod -R 777 node_modules/.cache
 # Specify the default command to run the application
+
+#RUN npm run build
+#RUN npm install -g serve 
+#CMD ["npx","serve","-s","build"]
 CMD ["npm", "start"]
