@@ -12,4 +12,4 @@ RUN wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17
     rm -f OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.2_8.tar.gz
 
 COPY jttours-0.0.1-SNAPSHOT.jar .
-ENTRYPOINT ["java","-jar","/jttours-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/opt/jttours-0.0.1-SNAPSHOT.jar"]
