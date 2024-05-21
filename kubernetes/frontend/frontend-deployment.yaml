@@ -15,7 +15,8 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: rahul1181/frontend-image:latest
+          image: rahulssvibm/frontend:latest
+          # image: rahul1181/frontend-image:latest
           envFrom:
             - configMapRef:
                 name: frontend-configmap
