@@ -1,14 +1,14 @@
-FROM registry.access.redhat.com/ubi8/ubi:latest AS builder
+FROM registry.access.redhat.com/ubi8/ubi:8.4 as js-builder
 
 MAINTAINER "Rahul Vishwakarma <Rahul.Vishwakarma2@ibm.com>"
 
-RUN yum install -y curl gnupg && \
-        export NODE_VERSION=${NODE_VERSION:-16} && \
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash && \
-        source "$HOME"/.bashrc && \
-        echo "installing nodejs $NODE_VERSION" && \
-        nvm install "$NODE_VERSION" >/dev/null && \
-        nvm use $NODE_VERSION 
+ENV PATH=/node-v14.17.6-linux-ppc64le/bin:$PATH
+
+RUN yum install -y wget git && \
+    wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-ppc64le.tar.gz && \
+    tar -C / -xzf node-v14.17.6-linux-ppc64le.tar.gz && \
+    rm -rf node-v14.17.6-linux-ppc64le.tar.gz && \
+    npm install -g yarn
 
 COPY ./ui /home/ui
 
