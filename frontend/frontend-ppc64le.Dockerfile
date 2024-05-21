@@ -1,9 +1,8 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.7
+FROM registry.access.redhat.com/ubi8/ubi:latest AS builder
 
 MAINTAINER "Rahul Vishwakarma <Rahul.Vishwakarma2@ibm.com>"
 
-RUN yum update -y && \
-        yum install -y curl gnupg && \
+RUN yum install -y curl gnupg && \
         export NODE_VERSION=${NODE_VERSION:-16} && \
         curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash && \
         source "$HOME"/.bashrc && \
@@ -15,11 +14,11 @@ COPY ./ui /home/ui
 
 WORKDIR /home/ui
         
-RUN useradd ui
+# RUN useradd ui
         
-RUN chmod -R ugoa+rwx /home/ui && chown -R ui:0 /home/ui
+# RUN chmod -R ugoa+rwx /home/ui && chown -R ui:0 /home/ui
         
-USER ui
+# USER ui
         
 EXPOSE 3000
         
