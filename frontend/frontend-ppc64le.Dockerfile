@@ -1,10 +1,10 @@
-FROM registry.access.redhat.com/ubi8/ubi:8.4 as js-builder
-
+# FROM registry.access.redhat.com/ubi8/ubi:8.4 as js-builder
+FROM ppc64le/ubuntu:22.04
 MAINTAINER "Rahul Vishwakarma <Rahul.Vishwakarma2@ibm.com>"
 
 ENV PATH=/node-v14.17.6-linux-ppc64le/bin:$PATH
 
-RUN yum install -y wget git && \
+RUN apt-get install -y wget git && \
     wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-ppc64le.tar.gz && \
     tar -C / -xzf node-v14.17.6-linux-ppc64le.tar.gz && \
     rm -rf node-v14.17.6-linux-ppc64le.tar.gz && \

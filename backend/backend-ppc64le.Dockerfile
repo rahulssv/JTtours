@@ -1,7 +1,8 @@
-FROM registry.access.redhat.com/ubi8/ubi:latest AS builder
+# FROM registry.access.redhat.com/ubi8/ubi:latest AS builder
+FROM ppc64le/ubuntu:22.04
 WORKDIR /opt
 
-RUN yum install -y wget git unzip
+RUN apt-get install -y wget git unzip
 
 RUN wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.2%2B8/OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.2_8.tar.gz && \
     tar -C /usr/local -xzf OpenJDK17U-jdk_ppc64le_linux_hotspot_17.0.2_8.tar.gz &&\
