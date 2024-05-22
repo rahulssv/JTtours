@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: rahul1181/frontend:ppc64le
+          image: rahul1181/frontend-image:latest
           imagePullPolicy: Always
           securityContext:
             allowPrivilegeEscalation: false
@@ -30,5 +30,5 @@ spec:
                 name: frontend-configmap
           ports:
             - containerPort: 3000
-      imagePullSecrets:
-        - name: my-registry-secret
+      # imagePullSecrets:
+      #   - name: my-registry-secret

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: rahul1181/backend:ppc64le
+          image: rahul1181/backend-image:latest
           imagePullPolicy: Always
           securityContext:
             allowPrivilegeEscalation: false
@@ -33,8 +33,8 @@ spec:
           volumeMounts:
             - name: mysql-persistent-storage
               mountPath: /var/lib/mysql
-      imagePullSecrets:
-        - name: my-registry-secret
+      # imagePullSecrets:
+      #   - name: my-registry-secret
       volumes:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
