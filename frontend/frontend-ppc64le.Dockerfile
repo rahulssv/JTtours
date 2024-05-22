@@ -4,7 +4,8 @@ MAINTAINER "Rahul Vishwakarma <Rahul.Vishwakarma2@ibm.com>"
 
 ENV PATH=/node-v14.17.6-linux-ppc64le/bin:$PATH
 
-RUN apt-get install -y wget git && \
+RUN apt-get update -y && \
+    apt-get install -y wget git && \
     wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-ppc64le.tar.gz && \
     tar -C / -xzf node-v14.17.6-linux-ppc64le.tar.gz && \
     rm -rf node-v14.17.6-linux-ppc64le.tar.gz && \
