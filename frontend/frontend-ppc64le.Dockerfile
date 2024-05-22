@@ -6,7 +6,7 @@ ENV PATH=/node-v14.17.6-linux-ppc64le/bin:$PATH
 
 RUN apt-get update -y && \
     apt-get install -y wget git && \
-    wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-ppc64le.tar.gz && \
+    wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-ppc64le.tar.gz --no-check-certificate && \
     tar -C / -xzf node-v14.17.6-linux-ppc64le.tar.gz && \
     rm -rf node-v14.17.6-linux-ppc64le.tar.gz && \
     npm install -g yarn
