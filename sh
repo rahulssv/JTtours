@@ -15,6 +15,13 @@ oc create configmap backend-configmap \
   --from-literal=SPRING_DATASOURCE_PASSWORD="admin" \
   -n jttours
 
+oc create secret docker-registry my-registry-secret \
+    --docker-server=docker.io \
+    --docker-username=rahul1181 \
+    --docker-password=UjFodWxAZG9ja2Vy \
+    --docker-email=rahulvishwakarma1181@gmail.com \
+    -n jttours
+
 oc apply -f kubernetes/backend/backend-deployment.yaml -n jttours
 oc apply -f kubernetes/backend/backend-service.yaml -n jttours
 oc expose svc backend-service -n jttours

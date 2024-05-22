@@ -15,14 +15,13 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          # image: rahul1181/frontend-image:latest
           image: rahul1181/frontend:ppc64le
           imagePullPolicy: Always
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
               drop:
-              - ALL
+                - ALL
             runAsNonRoot: true
             seccompProfile:
               type: RuntimeDefault
@@ -31,3 +30,5 @@ spec:
                 name: frontend-configmap
           ports:
             - containerPort: 3000
+      imagePullSecrets:
+        - name: my-registry-secret
