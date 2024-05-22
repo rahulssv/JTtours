@@ -14,11 +14,11 @@ COPY ./ui /home/ui
 
 WORKDIR /home/ui
         
-# RUN useradd ui
+RUN useradd ui
         
-# RUN chmod -R ugoa+rwx /home/ui && chown -R ui:0 /home/ui
+RUN chmod -R ugoa+rwx /home/ui && chown -R ui:0 /home/ui
         
-# USER ui
+USER ui
         
 EXPOSE 3000
         
