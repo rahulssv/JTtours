@@ -18,7 +18,7 @@ oc create configmap backend-configmap \
 oc create secret docker-registry my-registry-secret \
     --docker-server=docker.io \
     --docker-username=rahul1181 \
-    --docker-password=R1hul@docker \
+    --docker-password=********* \
     --docker-email=rahulvishwakarma1181@gmail.com \
     -n jttours
 
